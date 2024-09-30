@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="610.0" style="-fx-background-color: #282828;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SalaryEncashmentController">
+   <children>
+      <GridPane layoutX="1.0" layoutY="97.0" prefHeight="90.0" prefWidth="610.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="90.8" minHeight="10.0" prefHeight="90.8" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label layoutX="5.0" layoutY="5.0" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #1e81b0;">
+               <children>
+                  <Label layoutX="42.0" layoutY="14.0" prefHeight="30.0" prefWidth="82.0" text="Employee ID:" textFill="WHITE" />
+                  <Label fx:id="employee_id" layoutX="124.0" layoutY="14.0" prefHeight="30.0" prefWidth="82.0" textFill="WHITE" />
+                  <Label layoutX="42.0" layoutY="44.0" prefHeight="30.0" prefWidth="82.0" text="Name:" textFill="WHITE" />
+                  <Label fx:id="employee_name" layoutX="111.0" layoutY="44.0" prefHeight="30.0" prefWidth="82.0" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #154c79;" GridPane.columnIndex="1">
+               <children>
+                  <Label layoutX="42.0" layoutY="14.0" prefHeight="30.0" prefWidth="82.0" text="Role:" textFill="WHITE" />
+                  <Label fx:id="employee_role" layoutX="92.0" layoutY="14.0" prefHeight="30.0" prefWidth="82.0" textFill="WHITE" AnchorPane.leftAnchor="92.0" AnchorPane.rightAnchor="131.20000000000002" AnchorPane.topAnchor="14.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+      <GridPane layoutY="187.0" prefHeight="30.0" prefWidth="610.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #491d0d;">
+               <children>
+                  <Label layoutX="26.0" layoutY="8.0" text="Description" textFill="#fafafa" />
+                  <Label layoutX="448.0" layoutY="5.0" text="Earning" textFill="WHITE" />
+                  <Label layoutX="265.0" layoutY="5.0" text="Enumerate" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+      <GridPane layoutX="-1.0" layoutY="217.0" prefHeight="146.0" prefWidth="610.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #154c79;">
+               <children>
+                  <Label layoutX="50.0" layoutY="20.0" text="Basic Salary:" textFill="#f4efef" />
+                  <Label layoutX="50.0" layoutY="38.0" text="Bonus:" textFill="#f4efef" />
+                  <Label layoutX="50.0" layoutY="56.0" text="Sick leave Deduction:" textFill="#f4efef" />
+                  <Label layoutX="50.0" layoutY="74.0" text="Casual leave Deduction" textFill="#f4efef" />
+                  <Label layoutX="50.0" layoutY="92.0" text="Extra time:" textFill="#f4efef" />
+                  <Label layoutX="50.0" layoutY="110.0" text="Tax:" textFill="#f4efef" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #153f79;" GridPane.columnIndex="2">
+               <children>
+                  <Label fx:id="after_basicsalary" layoutX="30.0" layoutY="20.0" text="0" textFill="#f4efef" />
+                  <Label fx:id="after_bonus" layoutX="30.0" layoutY="38.0" text="0" textFill="#f4efef" />
+                  <Label fx:id="after_sickleave" layoutX="30.0" layoutY="56.0" text="0" textFill="#f4efef" />
+                  <Label fx:id="after_casualleaves" layoutX="30.0" layoutY="74.0" text="0" textFill="#f4efef" />
+                  <Label fx:id="after_extratime" layoutX="30.0" layoutY="92.0" text="0" textFill="#f4efef" />
+                  <Label fx:id="after_tax" layoutX="30.0" layoutY="110.0" text="0" textFill="#f4efef" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #791517;" GridPane.columnIndex="1">
+               <children>
+                  <Label fx:id="extra_time" layoutX="97.0" layoutY="92.0" prefHeight="18.0" prefWidth="64.0" text="0" textFill="#f4efef" />
+                  <Label fx:id="casualleaves_taken" layoutX="97.0" layoutY="74.0" prefHeight="18.0" prefWidth="35.0" text="0" textFill="#f4efef" />
+                  <Label fx:id="bonus" layoutX="97.0" layoutY="38.0" prefHeight="18.0" prefWidth="42.0" text="0" textFill="#f4efef" />
+                  <Label fx:id="sickleaves_taken" layoutX="97.0" layoutY="56.0" prefHeight="18.0" prefWidth="40.0" text="0" textFill="#f4efef" />
+                  <Label fx:id="tax" layoutX="97.0" layoutY="110.0" prefHeight="18.0" prefWidth="56.0" text="0" textFill="#f4efef" />
+                  <Label fx:id="basic_salary" layoutX="97.0" layoutY="20.0" prefHeight="18.0" prefWidth="41.0" text="0" textFill="#f4efef" />
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+      <GridPane layoutX="1.0" layoutY="363.0" prefHeight="30.0" prefWidth="610.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #7d6cb2;">
+               <children>
+                  <Label layoutX="31.0" layoutY="6.0" text="Total" textFill="WHITE" />
+                  <Label fx:id="total" layoutX="451.0" layoutY="8.0" text="0" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+      <BorderPane layoutX="-1.0" prefHeight="102.0" prefWidth="610.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="0.6000000000000227" AnchorPane.topAnchor="0.0">
+         <center>
+            <Label text="Salary Encashment" textFill="#f4e5e5" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+         </center>
+      </BorderPane>
+      <Button fx:id="transfer_salary" layoutX="244.0" layoutY="411.0" mnemonicParsing="false" onAction="#transferSalary" text="Transfer" />
+      <Accordion />
+      <Label fx:id="transermessage" layoutX="329.0" layoutY="414.0" prefHeight="18.0" prefWidth="269.0" textFill="#00f725">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="backbtton" layoutX="50.0" layoutY="411.0" mnemonicParsing="false" onAction="#back" text="Back" />
+   </children>
+</AnchorPane>
